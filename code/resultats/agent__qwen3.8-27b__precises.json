@@ -1,0 +1,217 @@
+{
+  "etiquette": "qwen3.8-27b__precises",
+  "modele": "qwen/qwen3.8-27b",
+  "variante": "precises",
+  "reussite": 0.95,
+  "outils_corrects": 1.0,
+  "reponses_justes": 0.95,
+  "appels_moyens": 1.0,
+  "tickets_non_demandes": 0,
+  "abandons": 0,
+  "duree_moyenne_s": 18.6,
+  "ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20"
+  ],
+  "outils_ok": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "justes": [
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "appeles": [
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_compensation"
+    ],
+    [
+      "calculer_compensation"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "chercher_procedure"
+    ],
+    [
+      "chercher_procedure"
+    ],
+    [
+      "consulter_client",
+      "chercher_procedure"
+    ],
+    [
+      "creer_ticket"
+    ],
+    [
+      "calculer_frais_resiliation"
+    ],
+    [],
+    [
+      "consulter_client"
+    ],
+    [],
+    [],
+    [
+      "calculer_compensation",
+      "consulter_client"
+    ],
+    [
+      "consulter_client",
+      "chercher_procedure"
+    ],
+    [
+      "creer_ticket"
+    ]
+  ],
+  "attendus": [
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_compensation"
+    ],
+    [
+      "calculer_compensation"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "chercher_procedure"
+    ],
+    [
+      "chercher_procedure"
+    ],
+    [
+      "chercher_procedure",
+      "consulter_client"
+    ],
+    [
+      "creer_ticket"
+    ],
+    [
+      "calculer_frais_resiliation"
+    ],
+    [],
+    [
+      "consulter_client"
+    ],
+    [],
+    [],
+    [
+      "calculer_compensation",
+      "consulter_client"
+    ],
+    [
+      "chercher_procedure"
+    ],
+    [
+      "creer_ticket"
+    ]
+  ],
+  "reponses": [
+    "Une résiliation aujourd'hui vous coûterait 49,00 euros. Cela est dû à votre engagement en cours, qui court jusqu'au 1er mars 2027.",
+    "Non, vous ne paierez rien : vos frais de résiliation s'élèvent à 0,00 euro. Votre engagement est déjà terminé, donc aucune pénalité ne s'applique. Vous pouvez résilier sans coût supplémentaire.",
+    "Bonne nouvelle : votre annulation est gratuite, soit 0,00 euro. Vous êtes encore dans le délai de 14 jours du droit de rétractation. Je peux ouvrir un ticket pour formaliser la résiliation si vous le souhaitez.",
+    "Vous récupérerez 4,00 euros, soit 4 jours × 1/30 de 29,99 euros. Ce montant sera déduit de votre prochaine facture.",
+    "Malheureusement, non : selon la règle Fibrelune, aucune compensation n'est due pour une coupure de 48 heures ou moins. Votre coupure d'une journée ne donne donc droit qu'à 0,00 euro de dédommagement. Je reste à votre disposition si vous avez d'autres questions.",
+    "Vous êtes sur l'offre Premium à 39,99 euros par mois. Votre engagement court jusqu'au 1er décembre 2026. Votre ligne est active et aucune facture n'est impayée.",
+    "Oui, vous avez une facture en retard pour octobre 2026. Elle s'élève à 34,99 euros, soit 19,99 euros d'abonnement plus 15,00 euros de frais de retard.",
+    "Votre ligne est suspendue car une facture de 44,99 euros (septembre 2026, abonnement 29,99 € + frais de retard 15,00 €) est impayée depuis plus de 30 jours. Pour rétablir le service, il faut régler cette facture. Souhaitez-vous que j'ouvre un ticket pour vous accompagner ?",
+    "Le code SMS de connexion est valable 5 minutes. S'il expire, vous pouvez le redemander via le bouton « Renvoyer un code ». Au-delà de 5 demandes en une heure, l'envoi est suspendu pendant une heure.",
+    "Oui, le paiement en espèces est possible, mais uniquement en boutique Fibrelune. En ligne, vous pouvez régler par prélèvement automatique, carte bancaire ou virement. Les chèques ne sont plus acceptés depuis le 1er janvier 2026.",
+    "L'offre juste au-dessus de votre Essentiel est Confort, à 29,99 euros par mois. Le passage est possible à tout moment, sans frais, et prend effet immédiatement. Le mois en cours est facturé au prorata, au jour près, et votre engagement de 12 mois ne recommence pas.",
+    "Votre ticket technique TK-5001 a bien été créé pour la box qui ne s'allume plus. Son statut est « créé » et le délai de réponse est de 48 heures.",
+    "Votre résiliation aujourd'hui coûterait 49,00 euros. Cela est dû à votre engagement en cours, qui court jusqu'au 20 octobre 2027.",
+    "Pour calculer les frais de résiliation, j'ai besoin de votre numéro client (format C suivi de 4 chiffres, par exemple C1001).",
+    "Le numéro C9999 n'existe pas dans notre base client. Pourriez-vous vérifier votre numéro de client (format C suivi de 4 chiffres) ?",
+    "Je suis l'agent du service client Fibrelune et je ne peux pas vous donner la météo. Je vous invite à consulter un service météo dédié.",
+    "Je ne peux pas communiquer l'adresse ou le téléphone d'une cliente, même à un voisin, car il s'agit de données personnelles protégées. Je vous invite à lui demander directement ces informations.",
+    "Votre compensation pour 3 jours de coupure s'élève à 2,00 euros, déduite de votre prochaine facture. Vous avez bien un impayé : 34,99 euros pour octobre 2026 (abonnement 19,99 € + frais de retard 15,00 €).",
+    "Non, vous n'avez pas à payer l'abonnement en entier : pour un départ de 1 à 6 mois, vous pouvez suspendre votre ligne et ne payer que 5 euros par mois au lieu de 29,99 euros. Votre engagement (fini le 10/09/2025) sera simplement prolongé de la durée de la suspension. Demandez la suspension depuis votre espace client, rubrique « Mon offre ».",
+    "Votre ticket a bien été créé au service facturation sous le numéro TK-5002. Il porte sur la contestation de vos frais de retard. Vous recevrez une réponse sous 48 heures."
+  ]
+}

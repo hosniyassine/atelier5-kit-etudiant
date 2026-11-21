@@ -1,0 +1,219 @@
+{
+  "etiquette": "gpt-oss-20b__precises",
+  "modele": "openai/gpt-oss-20b",
+  "variante": "precises",
+  "reussite": 0.9,
+  "outils_corrects": 1.0,
+  "reponses_justes": 0.9,
+  "appels_moyens": 1.1,
+  "tickets_non_demandes": 0,
+  "abandons": 0,
+  "duree_moyenne_s": 15.6,
+  "ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16",
+    "A17",
+    "A18",
+    "A19",
+    "A20"
+  ],
+  "outils_ok": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "justes": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    true,
+    false,
+    true
+  ],
+  "appeles": [
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "consulter_client",
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_compensation"
+    ],
+    [
+      "calculer_compensation"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "chercher_procedure"
+    ],
+    [
+      "chercher_procedure"
+    ],
+    [
+      "consulter_client",
+      "chercher_procedure"
+    ],
+    [
+      "creer_ticket"
+    ],
+    [
+      "consulter_client",
+      "calculer_frais_resiliation"
+    ],
+    [],
+    [
+      "consulter_client"
+    ],
+    [],
+    [],
+    [
+      "consulter_client",
+      "calculer_compensation"
+    ],
+    [
+      "consulter_client",
+      "chercher_procedure"
+    ],
+    [
+      "creer_ticket"
+    ]
+  ],
+  "attendus": [
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_frais_resiliation"
+    ],
+    [
+      "calculer_compensation"
+    ],
+    [
+      "calculer_compensation"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "consulter_client"
+    ],
+    [
+      "chercher_procedure"
+    ],
+    [
+      "chercher_procedure"
+    ],
+    [
+      "chercher_procedure",
+      "consulter_client"
+    ],
+    [
+      "creer_ticket"
+    ],
+    [
+      "calculer_frais_resiliation"
+    ],
+    [],
+    [
+      "consulter_client"
+    ],
+    [],
+    [],
+    [
+      "calculer_compensation",
+      "consulter_client"
+    ],
+    [
+      "chercher_procedure"
+    ],
+    [
+      "creer_ticket"
+    ]
+  ],
+  "reponses": [
+    "Le coût de résiliation aujourd’hui est de **49,00 €**.  \nCette somme correspond à votre engagement qui se termine le **1 mars 2027**.",
+    "Vous n’avez aucun frais de résiliation, votre engagement est terminé. Le montant à payer est de 0,00 euros. Vous pouvez donc arrêter votre abonnement sans coût supplémentaire.",
+    "Bonjour, votre abonnement a été souscrit le 8 novembre 2026. Vous bénéficiez du droit de rétractation, donc la résiliation ne vous coûtera rien : 0,00 €.",
+    "Vous récupérerez **4,00 €**, calculés comme 4 jours × 1/30 de 29,99 € et déduits de votre prochaine facture.",
+    "Bonjour, votre demande de compensation a été calculée. Vous n'avez pas droit à un dédommagement car la coupure a duré 1 jour, soit moins de 48 heures. Le montant de compensation est de 0,00 €.",
+    "Votre offre est Premium. Vous êtes engagé jusqu'au 1 er décembre 2026.",
+    "Oui, vous avez une facture impayée pour le mois d’octobre 2026 d’un montant de 34,99 euros.  \nLe montant comprend 19,99 euros d’abonnement et 15,00 euros de frais de retard.",
+    "Votre ligne est suspendue car la facture de septembre 2026 de 44,99 € reste impayée depuis plus de 30 jours. En conséquence, le service a été interrompu depuis lundi. Vous pouvez régulariser le paiement pour réactiver votre ligne.",
+    "Le code à 6 chiffres envoyé par SMS pour la connexion est valable 5 minutes.  \nAprès cette période, il expire et doit être redemandé via le bouton « Renvoyer un code ».  \nSi vous avez besoin d’aide supplémentaire, n’hésitez pas à me le dire.",
+    "Oui, vous pouvez régler votre facture en liquide, mais uniquement en boutique Fibrelune.  \nLe paiement en espèces n’est pas possible via l’espace client ou par virement.  \nLes chèques ne sont plus acceptés depuis le 1ᵉʳ janvier 2026.",
+    "Vous passerez à l’offre Confort, qui coûte 29,99 euros par mois.  \nVotre tarif mensuel sera donc de 29,99 euros.  \nAucun autre frais supplémentaire n’est mentionné.",
+    "Ticket créé avec succès. Votre numéro de ticket est TK‑5001 et il est en statut « créé ». Vous recevrez une réponse dans les 48 heures.",
+    "Le coût de résiliation est de **49,00 €**.  \nVotre engagement actuel se termine le **2027‑10‑20**.  \nVous pouvez procéder à la résiliation dès maintenant si vous le souhaitez.",
+    "Pour calculer le coût de votre résiliation, j’ai besoin de votre numéro client. Pouvez‑vous me le communiquer ?",
+    "Je suis désolé, mais je ne trouve pas de compte correspondant au numéro C9999. Pouvez‑vous vérifier votre numéro client ou me fournir un autre identifiant ?",
+    "Je suis désolé, mais je ne peux pas répondre à cette question.",
+    "Je suis désolé, mais je ne peux pas divulguer les coordonnées personnelles d’un autre client.",
+    "Vous serez compensé de 2,00 € pour les 3 jours de coupure.  \nVous avez un impayé de 34,99 € pour le mois d’octobre 2026.",
+    "Votre abonnement Confort est facturé à 29,99 € par mois. Tant que vous ne résiliez pas votre contrat, vous devez continuer à régler ce montant, même si vous êtes à l’étranger. Si vous souhaitez suspendre votre service, il faut contacter le service technique pour vérifier les options disponibles.",
+    "Votre ticket a bien été créé.  \nNuméro de ticket : **TK-5002**.  \nStatut : **créé** – réponse attendue dans **48 heures**."
+  ]
+}

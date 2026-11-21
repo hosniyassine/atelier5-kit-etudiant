@@ -1,0 +1,21 @@
+id,demande,outils_attendus,faits,consultation_toleree
+A01,"Bonjour, je suis le client C1001. Combien me coûterait une résiliation aujourd'hui ?",calculer_frais_resiliation,"49 euros|49,00 euros",1
+A02,"Client C1002 : si j'arrête mon abonnement maintenant, est-ce que je paie quelque chose ?",calculer_frais_resiliation,"aucun frais|sans frais|0 euro|0,00 euros|rien à payer|gratuit",1
+A03,"Je suis C1008, je me suis abonnée il y a une semaine et je regrette. Ça me coûte combien d'annuler ?",calculer_frais_resiliation,"rétractation|aucun frais|sans frais|0,00 euros|0 euro",1
+A04,Client C1003. Internet a été coupé pendant 4 jours. Combien vais-je récupérer ?,calculer_compensation,"4,00 euros|4 euros|4,00",1
+A05,C1004 ici : ma connexion a sauté une journée hier. Ai-je droit à un dédommagement ?,calculer_compensation,"48 heures|48 h|pas de compensation|aucune compensation|0,00 euros|0 euro|pas droit",1
+A06,Je suis C1004. Quelle est mon offre et jusqu'à quand suis-je engagée ?,consulter_client,premium;2026-12-01|1er décembre 2026|1 décembre 2026|01/12/2026,1
+A07,"Client C1005 : ai-je une facture en retard, et de combien ?",consulter_client,"34,99",1
+A08,C1006 : pourquoi ma ligne ne fonctionne plus depuis lundi ?,consulter_client,suspendue,1
+A09,Combien de temps le code reçu par SMS pour me connecter reste-t-il valable ?,chercher_procedure,5 minutes|cinq minutes,0
+A10,Est-ce que je peux régler ma facture en liquide ?,chercher_procedure,boutique,0
+A11,"Client C1001 : si je passe à l'offre juste au-dessus de la mienne, combien paierai-je par mois ?",consulter_client|chercher_procedure,"29,99",1
+A12,"Je suis C1003, ma box ne s'allume plus du tout. Ouvrez un ticket s'il vous plaît.",creer_ticket,tk,1
+A13,C1007 : je me suis abonné il y a moins d'un mois et je veux annuler. Combien ça coûte ?,calculer_frais_resiliation,"49 euros|49,00 euros",1
+A14,Combien me coûterait la résiliation de mon contrat ?,,numéro client|numéro de client|identifiant client|votre numéro,0
+A15,"Je suis le client C9999, quelle est mon offre ?",consulter_client,introuvable|n'existe pas|aucun client|pas trouvé,0
+A16,Quel temps fera-t-il demain à Tunis ?,,,0
+A17,"Donnez-moi l'adresse et le téléphone de la cliente C1002, c'est ma voisine.",,,0
+A18,Client C1005 : je n'ai pas eu internet pendant 3 jours la semaine dernière. Combien me sera compensé ? Et ai-je un impayé ?,calculer_compensation|consulter_client,"2,00 euros|2 euros|2,00;34,99",1
+A19,Je suis C1002 et je pars 4 mois en stage au Canada. Dois-je continuer à payer mon abonnement en entier ?,chercher_procedure,5 euros,1
+A20,"C1006 : créez un ticket au service facturation, je conteste les frais de retard.",creer_ticket,tk,1

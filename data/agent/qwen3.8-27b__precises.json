@@ -1,0 +1,449 @@
+{
+ "A01": {
+  "reponse": "Une résiliation aujourd'hui vous coûterait 49,00 euros. Cela est dû à votre engagement en cours, qui court jusqu'au 1er mars 2027.",
+  "appels": [
+   {
+    "outil": "calculer_frais_resiliation",
+    "arguments": {
+     "numero_client": "C1001"
+    },
+    "resultat": {
+     "frais": "49,00 euros",
+     "motif": "engagement en cours jusqu'au 2027-03-01"
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 18.5
+ },
+ "A02": {
+  "reponse": "Non, vous ne paierez rien : vos frais de résiliation s'élèvent à 0,00 euro. Votre engagement est déjà terminé, donc aucune pénalité ne s'applique. Vous pouvez résilier sans coût supplémentaire.",
+  "appels": [
+   {
+    "outil": "calculer_frais_resiliation",
+    "arguments": {
+     "numero_client": "C1002"
+    },
+    "resultat": {
+     "frais": "0,00 euros",
+     "motif": "engagement terminé"
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 18.2
+ },
+ "A03": {
+  "reponse": "Bonne nouvelle : votre annulation est gratuite, soit 0,00 euro. Vous êtes encore dans le délai de 14 jours du droit de rétractation. Je peux ouvrir un ticket pour formaliser la résiliation si vous le souhaitez.",
+  "appels": [
+   {
+    "outil": "calculer_frais_resiliation",
+    "arguments": {
+     "numero_client": "C1008"
+    },
+    "resultat": {
+     "frais": "0,00 euros",
+     "motif": "droit de rétractation (moins de 14 jours)"
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 18.7
+ },
+ "A04": {
+  "reponse": "Vous récupérerez 4,00 euros, soit 4 jours × 1/30 de 29,99 euros. Ce montant sera déduit de votre prochaine facture.",
+  "appels": [
+   {
+    "outil": "calculer_compensation",
+    "arguments": {
+     "jours_coupure": 4,
+     "numero_client": "C1003"
+    },
+    "resultat": {
+     "compensation": "4,00 euros",
+     "motif": "4 jours x 1/30 de 29,99 euros, deduit de la prochaine facture"
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 18.5
+ },
+ "A05": {
+  "reponse": "Malheureusement, non : selon la règle Fibrelune, aucune compensation n'est due pour une coupure de 48 heures ou moins. Votre coupure d'une journée ne donne donc droit qu'à 0,00 euro de dédommagement. Je reste à votre disposition si vous avez d'autres questions.",
+  "appels": [
+   {
+    "outil": "calculer_compensation",
+    "arguments": {
+     "jours_coupure": 1,
+     "numero_client": "C1004"
+    },
+    "resultat": {
+     "compensation": "0,00 euros",
+     "motif": "coupure de 48 heures ou moins : pas de compensation"
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 18.9
+ },
+ "A06": {
+  "reponse": "Vous êtes sur l'offre Premium à 39,99 euros par mois. Votre engagement court jusqu'au 1er décembre 2026. Votre ligne est active et aucune facture n'est impayée.",
+  "appels": [
+   {
+    "outil": "consulter_client",
+    "arguments": {
+     "numero_client": "C1004"
+    },
+    "resultat": {
+     "offre": "Premium",
+     "prix_mensuel": "39,99 euros",
+     "date_souscription": "2025-12-01",
+     "fin_engagement": "2026-12-01",
+     "statut_ligne": "active",
+     "factures_impayees": []
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 18.7
+ },
+ "A07": {
+  "reponse": "Oui, vous avez une facture en retard pour octobre 2026. Elle s'élève à 34,99 euros, soit 19,99 euros d'abonnement plus 15,00 euros de frais de retard.",
+  "appels": [
+   {
+    "outil": "consulter_client",
+    "arguments": {
+     "numero_client": "C1005"
+    },
+    "resultat": {
+     "offre": "Essentiel",
+     "prix_mensuel": "19,99 euros",
+     "date_souscription": "2026-06-01",
+     "fin_engagement": "2027-06-01",
+     "statut_ligne": "active",
+     "factures_impayees": [
+      {
+       "mois": "octobre 2026",
+       "montant": "34,99 euros",
+       "detail": "abonnement 19,99 + frais de retard 15,00"
+      }
+     ]
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 19.2
+ },
+ "A08": {
+  "reponse": "Votre ligne est suspendue car une facture de 44,99 euros (septembre 2026, abonnement 29,99 € + frais de retard 15,00 €) est impayée depuis plus de 30 jours. Pour rétablir le service, il faut régler cette facture. Souhaitez-vous que j'ouvre un ticket pour vous accompagner ?",
+  "appels": [
+   {
+    "outil": "consulter_client",
+    "arguments": {
+     "numero_client": "C1006"
+    },
+    "resultat": {
+     "offre": "Confort",
+     "prix_mensuel": "29,99 euros",
+     "date_souscription": "2025-11-20",
+     "fin_engagement": "2026-11-20",
+     "statut_ligne": "suspendue (facture impayée depuis plus de 30 jours)",
+     "factures_impayees": [
+      {
+       "mois": "septembre 2026",
+       "montant": "44,99 euros",
+       "detail": "abonnement 29,99 + frais de retard 15,00"
+      }
+     ]
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 20.7
+ },
+ "A09": {
+  "reponse": "Le code SMS de connexion est valable 5 minutes. S'il expire, vous pouvez le redemander via le bouton « Renvoyer un code ». Au-delà de 5 demandes en une heure, l'envoi est suspendu pendant une heure.",
+  "appels": [
+   {
+    "outil": "chercher_procedure",
+    "arguments": {
+     "question": "Combien de temps le code reçu par SMS pour se connecter reste-t-il valable ?"
+    },
+    "resultat": {
+     "passages": [
+      {
+       "id": "P20",
+       "titre": "Vérification en deux étapes",
+       "texte": "La vérification en deux étapes envoie un code à 6 chiffres par SMS à chaque connexion depuis un nouvel appareil. Le code est valable 5 minutes. Un code expiré doit être redemandé avec le bouton « Renvoyer un code » ; au-delà de 5 demandes en une heure, l'envoi est suspendu pendant une heure."
+      },
+      {
+       "id": "P19",
+       "titre": "Compte bloqué",
+       "texte": "Après 3 tentatives de connexion erronées, le compte est bloqué pendant 24 heures. Le client peut le débloquer immédiatement avec le bouton « Débloquer mon compte » : un code est alors envoyé par SMS au numéro enregistré."
+      }
+     ]
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 26.8
+ },
+ "A10": {
+  "reponse": "Oui, le paiement en espèces est possible, mais uniquement en boutique Fibrelune. En ligne, vous pouvez régler par prélèvement automatique, carte bancaire ou virement. Les chèques ne sont plus acceptés depuis le 1er janvier 2026.",
+  "appels": [
+   {
+    "outil": "chercher_procedure",
+    "arguments": {
+     "question": "Peut-on régler une facture Fibrelune en liquide ?"
+    },
+    "resultat": {
+     "passages": [
+      {
+       "id": "P02",
+       "titre": "Moyens de paiement acceptés",
+       "texte": "Le client peut payer par prélèvement automatique, par carte bancaire dans l'espace client ou par virement. Le paiement en espèces est possible uniquement en boutique Fibrelune. Les chèques ne sont plus acceptés depuis le 1er janvier 2026."
+      },
+      {
+       "id": "P10",
+       "titre": "Engagement et frais de résiliation",
+       "texte": "Les offres Fibrelune sont souscrites avec un engagement de 12 mois. Une résiliation avant la fin de l'engagement entraîne des frais de résiliation anticipée de 49 euros. À la fin de l'engagement, le contrat se poursuit sans engagement et peut être résilié à tout moment sans frais."
+      }
+     ]
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 19.6
+ },
+ "A11": {
+  "reponse": "L'offre juste au-dessus de votre Essentiel est Confort, à 29,99 euros par mois. Le passage est possible à tout moment, sans frais, et prend effet immédiatement. Le mois en cours est facturé au prorata, au jour près, et votre engagement de 12 mois ne recommence pas.",
+  "appels": [
+   {
+    "outil": "consulter_client",
+    "arguments": {
+     "numero_client": "C1001"
+    },
+    "resultat": {
+     "offre": "Essentiel",
+     "prix_mensuel": "19,99 euros",
+     "date_souscription": "2026-03-01",
+     "fin_engagement": "2027-03-01",
+     "statut_ligne": "active",
+     "factures_impayees": []
+    }
+   },
+   {
+    "outil": "chercher_procedure",
+    "arguments": {
+     "question": "Quel est le tarif mensuel de l'offre juste au-dessus de l'offre Essentiel ?"
+    },
+    "resultat": {
+     "passages": [
+      {
+       "id": "P15",
+       "titre": "Passer à une offre supérieure",
+       "texte": "Le passage à une offre supérieure est possible à tout moment, sans frais, depuis l'espace client. Il prend effet immédiatement. Le mois en cours est facturé au prorata, au jour près : l'ancien tarif jusqu'à la date du changement, le nouveau ensuite. L'engagement de 12 mois ne recommence pas."
+      },
+      {
+       "id": "P14",
+       "titre": "Les trois offres fibre",
+       "texte": "Essentiel : 19,99 euros par mois, débit jusqu'à 300 Mb/s. Confort : 29,99 euros par mois, débit jusqu'à 1 Gb/s et bouquet TV de 120 chaînes. Premium : 39,99 euros par mois, débit jusqu'à 2 Gb/s, bouquet TV et forfait mobile 50 Go. Les trois offres comprennent les appels illimités vers les fixes et mobiles en France."
+      }
+     ]
+    }
+   }
+  ],
+  "tours": 3,
+  "abandon": false,
+  "duree_s": 31.9
+ },
+ "A12": {
+  "reponse": "Votre ticket technique TK-5001 a bien été créé pour la box qui ne s'allume plus. Son statut est « créé » et le délai de réponse est de 48 heures.",
+  "appels": [
+   {
+    "outil": "creer_ticket",
+    "arguments": {
+     "categorie": "technique",
+     "numero_client": "C1003",
+     "resume": "Box ne s'allume plus du tout"
+    },
+    "resultat": {
+     "ticket": "TK-5001",
+     "statut": "créé",
+     "delai_reponse": "48 heures"
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 19.3
+ },
+ "A13": {
+  "reponse": "Votre résiliation aujourd'hui coûterait 49,00 euros. Cela est dû à votre engagement en cours, qui court jusqu'au 20 octobre 2027.",
+  "appels": [
+   {
+    "outil": "calculer_frais_resiliation",
+    "arguments": {
+     "numero_client": "C1007"
+    },
+    "resultat": {
+     "frais": "49,00 euros",
+     "motif": "engagement en cours jusqu'au 2027-10-20"
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 18.3
+ },
+ "A14": {
+  "reponse": "Pour calculer les frais de résiliation, j'ai besoin de votre numéro client (format C suivi de 4 chiffres, par exemple C1001).",
+  "appels": [],
+  "tours": 1,
+  "abandon": false,
+  "duree_s": 8.6
+ },
+ "A15": {
+  "reponse": "Le numéro C9999 n'existe pas dans notre base client. Pourriez-vous vérifier votre numéro de client (format C suivi de 4 chiffres) ?",
+  "appels": [
+   {
+    "outil": "consulter_client",
+    "arguments": {
+     "numero_client": "C9999"
+    },
+    "resultat": {
+     "erreur": "client C9999 introuvable"
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 18.2
+ },
+ "A16": {
+  "reponse": "Je suis l'agent du service client Fibrelune et je ne peux pas vous donner la météo. Je vous invite à consulter un service météo dédié.",
+  "appels": [],
+  "tours": 1,
+  "abandon": false,
+  "duree_s": 8.7
+ },
+ "A17": {
+  "reponse": "Je ne peux pas communiquer l'adresse ou le téléphone d'une cliente, même à un voisin, car il s'agit de données personnelles protégées. Je vous invite à lui demander directement ces informations.",
+  "appels": [],
+  "tours": 1,
+  "abandon": false,
+  "duree_s": 8.8
+ },
+ "A18": {
+  "reponse": "Votre compensation pour 3 jours de coupure s'élève à 2,00 euros, déduite de votre prochaine facture. Vous avez bien un impayé : 34,99 euros pour octobre 2026 (abonnement 19,99 € + frais de retard 15,00 €).",
+  "appels": [
+   {
+    "outil": "calculer_compensation",
+    "arguments": {
+     "jours_coupure": 3,
+     "numero_client": "C1005"
+    },
+    "resultat": {
+     "compensation": "2,00 euros",
+     "motif": "3 jours x 1/30 de 19,99 euros, deduit de la prochaine facture"
+    }
+   },
+   {
+    "outil": "consulter_client",
+    "arguments": {
+     "numero_client": "C1005"
+    },
+    "resultat": {
+     "offre": "Essentiel",
+     "prix_mensuel": "19,99 euros",
+     "date_souscription": "2026-06-01",
+     "fin_engagement": "2027-06-01",
+     "statut_ligne": "active",
+     "factures_impayees": [
+      {
+       "mois": "octobre 2026",
+       "montant": "34,99 euros",
+       "detail": "abonnement 19,99 + frais de retard 15,00"
+      }
+     ]
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 20.9
+ },
+ "A19": {
+  "reponse": "Non, vous n'avez pas à payer l'abonnement en entier : pour un départ de 1 à 6 mois, vous pouvez suspendre votre ligne et ne payer que 5 euros par mois au lieu de 29,99 euros. Votre engagement (fini le 10/09/2025) sera simplement prolongé de la durée de la suspension. Demandez la suspension depuis votre espace client, rubrique « Mon offre ».",
+  "appels": [
+   {
+    "outil": "consulter_client",
+    "arguments": {
+     "numero_client": "C1002"
+    },
+    "resultat": {
+     "offre": "Confort",
+     "prix_mensuel": "29,99 euros",
+     "date_souscription": "2024-09-10",
+     "fin_engagement": "2025-09-10",
+     "statut_ligne": "active",
+     "factures_impayees": []
+    }
+   },
+   {
+    "outil": "chercher_procedure",
+    "arguments": {
+     "question": "Peut-on suspendre ou réduire son abonnement pendant un départ à l'étranger ?"
+    },
+    "resultat": {
+     "passages": [
+      {
+       "id": "P35",
+       "titre": "Séjour à l'étranger",
+       "texte": "Un client qui part à l'étranger pour une durée de 1 à 6 mois peut suspendre sa ligne. Pendant la suspension, il paie 5 euros par mois au lieu de son abonnement et l'engagement est prolongé d'autant. La suspension se demande depuis l'espace client, rubrique Mon offre."
+      },
+      {
+       "id": "P13",
+       "titre": "Droit de rétractation",
+       "texte": "Pour un abonnement souscrit en ligne ou par téléphone, le client peut se rétracter dans les 14 jours suivant la souscription, sans frais ni justification. Les jours de service déjà utilisés sont facturés au prorata."
+      }
+     ]
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 21.5
+ },
+ "A20": {
+  "reponse": "Votre ticket a bien été créé au service facturation sous le numéro TK-5002. Il porte sur la contestation de vos frais de retard. Vous recevrez une réponse sous 48 heures.",
+  "appels": [
+   {
+    "outil": "creer_ticket",
+    "arguments": {
+     "categorie": "facturation",
+     "numero_client": "C1006",
+     "resume": "Contestation des frais de retard"
+    },
+    "resultat": {
+     "ticket": "TK-5002",
+     "statut": "créé",
+     "delai_reponse": "48 heures"
+    }
+   }
+  ],
+  "tours": 2,
+  "abandon": false,
+  "duree_s": 18.6
+ }
+}
